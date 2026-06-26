@@ -16,6 +16,7 @@ export const mastra = new Mastra({
   storage: new MastraCompositeStore({
     id: 'composite-storage',
     default: new LibSQLStore({
+      id: "mastra-storage",
       url: process.env.TURSO_DATABASE_URL!,
       authToken: process.env.TURSO_AUTH_TOKEN!,
     }),
